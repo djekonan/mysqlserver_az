@@ -1,4 +1,4 @@
-resource "azurerm_resource_group" "mcit420zz5um" {
-  name     = "mcit_resource_group_420-ZZ5-UM"
+resource "azurerm_resource_group" "mysqlresgroup" {
+  name     = "rs_mql_az"
   location = "canadacentral"
 }
