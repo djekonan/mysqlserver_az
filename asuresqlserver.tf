@@ -1,6 +1,6 @@
-resource "azurerm_resource_group" "databaserg" {
-  name     = "database-rg"
-  location = "West Europe"
+resource "azurerm_resource_group" "mysqlresgroup" {
+  name     = "rs_mql_az"
+  location = "canadacentral"
 }
 
 resource "azurerm_mssql_server" "azuresqlserver" {
@@ -8,8 +8,7 @@ resource "azurerm_mssql_server" "azuresqlserver" {
   resource_group_name          = azurerm_resource_group.databaserg.name
   location                     = azurerm_resource_group.databaserg.location
   version                      = "12.0"
-  administrator_login          = var.administrator_login
-  administrator_login_password = var.administrator_login_password
+ 
   minimum_tls_version          = "1.2"
 
   azuread_administrator {
